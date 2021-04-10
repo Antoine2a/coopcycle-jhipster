@@ -35,7 +35,7 @@ public class MailLoggingAspect {
     public void sendNewEmail(JoinPoint joinPoint){
         Logger log = logger(joinPoint);
         if (log.isDebugEnabled()) {
-            log.debug("test - log Mail logging Aspect")
+            log.debug("test - log Mail logging Aspect");
             log.debug("Enter: {}() with argument[s] = {}", joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
         }
         try {
