@@ -1,0 +1,22 @@
+{
+  "myblogApp": {
+    "merchant": {
+      "home": {
+        "title": "Merchants",
+        "createLabel": "Создать новый Merchant",
+        "createOrEditLabel": "Создать или отредактировать Merchant",
+        "notFound": "No Merchants found"
+      },
+      "created": "Новый Merchant создан с идентификатором {{ param }}",
+      "updated": "Merchant обновлен с идентификатором {{ param }}",
+      "deleted": "Merchant удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Merchant {{ id }}?"
+      },
+      "detail": {
+        "title": "Merchant"
+      },
+      "userCoopcycle": "User Coopcycle"
+    }
+  }
+}

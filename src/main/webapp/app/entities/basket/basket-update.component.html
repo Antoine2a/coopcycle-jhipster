@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-basket-heading" jhiTranslate="myblogApp.basket.home.createOrEditLabel">Create or edit a Basket</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myblogApp.basket.totalprice" for="field_totalprice">Totalprice</label>
+                    <input type="number" class="form-control" name="totalprice" id="field_totalprice"
+                           formControlName="totalprice"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myblogApp.basket.destination" for="field_destination">Destination</label>
+                    <input type="text" class="form-control" name="destination" id="field_destination"
+                           formControlName="destination"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myblogApp.basket.userCoopcycle" for="field_userCoopcycle">User Coopcycle</label>
+                    <select class="form-control" id="field_userCoopcycle" name="userCoopcycle" formControlName="userCoopcycle">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userCoopcycleOption.id === editForm.get('userCoopcycle')!.value?.id ? editForm.get('userCoopcycle')!.value : userCoopcycleOption" *ngFor="let userCoopcycleOption of usercoopcycles; trackBy: trackById">{{ userCoopcycleOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myblogApp.basket.commerce" for="field_commerce">Commerce</label>
+                    <select class="form-control" id="field_commerce" name="commerce" formControlName="commerce">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="commerceOption.id === editForm.get('commerce')!.value?.id ? editForm.get('commerce')!.value : commerceOption" *ngFor="let commerceOption of commerce; trackBy: trackById">{{ commerceOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "myblogApp": {
+    "courier": {
+      "home": {
+        "title": "Couriers",
+        "createLabel": "Créer un nouveau Courier",
+        "createOrEditLabel": "Créer ou éditer un Courier",
+        "notFound": "Aucun Courier trouvé"
+      },
+      "created": "Un nouveau Courier a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Courier avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Courier avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Courier {{ id }} ?"
+      },
+      "detail": {
+        "title": "Courier"
+      },
+      "notation": "Notation",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "userCoopcycle": "User Coopcycle"
+    }
+  }
+}

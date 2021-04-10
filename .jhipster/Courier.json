@@ -1,0 +1,38 @@
+{
+  "name": "Courier",
+  "fields": [
+    {
+      "fieldName": "notation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userCoopcycle",
+      "otherEntityRelationshipName": "courier",
+      "relationshipName": "userCoopcycle",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210410182414",
+  "entityTableName": "courier",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

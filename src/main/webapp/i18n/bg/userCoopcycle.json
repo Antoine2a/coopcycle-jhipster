@@ -1,0 +1,31 @@
+{
+  "myblogApp": {
+    "userCoopcycle": {
+      "home": {
+        "title": "User Coopcycles",
+        "createLabel": "Създайте нов User Coopcycle",
+        "createOrEditLabel": "Създайте или редактирайте User Coopcycle",
+        "notFound": "User Coopcycles не са намерени"
+      },
+      "created": "Създаден е нов User Coopcycle с идентификатор {{ param }}",
+      "updated": "User Coopcycle с идентификатор {{ param }} e oбновен",
+      "deleted": "User Coopcycle с идентификатор {{ param }} е изтрит",
+      "delete": {
+        "question": "Наистина ли искате да изтриете User Coopcycle {{ id }}?"
+      },
+      "detail": {
+        "title": "User Coopcycle"
+      },
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "phone": "Phone",
+      "commerce": "Commerce",
+      "cooperative": "Cooperative",
+      "basket": "Basket",
+      "courier": "Courier",
+      "client": "Client",
+      "merchant": "Merchant"
+    }
+  }
+}

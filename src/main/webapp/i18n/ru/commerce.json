@@ -1,0 +1,28 @@
+{
+  "myblogApp": {
+    "commerce": {
+      "home": {
+        "title": "Commerce",
+        "createLabel": "Создать новый Commerce",
+        "createOrEditLabel": "Создать или отредактировать Commerce",
+        "notFound": "No Commerce found"
+      },
+      "created": "Новый Commerce создан с идентификатором {{ param }}",
+      "updated": "Commerce обновлен с идентификатором {{ param }}",
+      "deleted": "Commerce удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Commerce {{ id }}?"
+      },
+      "detail": {
+        "title": "Commerce"
+      },
+      "adress": "Adress",
+      "notationCommerce": "Notation Commerce",
+      "type": "Type",
+      "basket": "Basket",
+      "product": "Product",
+      "userCoopcycle": "User Coopcycle",
+      "cooperative": "Cooperative"
+    }
+  }
+}

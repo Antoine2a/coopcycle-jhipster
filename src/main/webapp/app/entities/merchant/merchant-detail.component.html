@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="merchant">
+            <h2><span jhiTranslate="myblogApp.merchant.detail.title">Merchant</span> {{ merchant.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myblogApp.merchant.userCoopcycle">User Coopcycle</span></dt>
+                <dd>
+                    <div *ngIf="merchant.userCoopcycle">
+                        <a [routerLink]="['/user-coopcycle', merchant.userCoopcycle?.id, 'view']">{{ merchant.userCoopcycle?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/merchant', merchant.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

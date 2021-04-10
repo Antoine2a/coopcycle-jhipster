@@ -1,0 +1,31 @@
+{
+  "myblogApp": {
+    "userCoopcycle": {
+      "home": {
+        "title": "UserCoopcycles",
+        "createLabel": "Créer un nouveau User Coopcycle",
+        "createOrEditLabel": "Créer ou éditer un User Coopcycle",
+        "notFound": "Aucun User Coopcycle trouvé"
+      },
+      "created": "Un nouveau User Coopcycle a été créé avec l'identifiant {{ param }}",
+      "updated": "Le User Coopcycle avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le User Coopcycle avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le User Coopcycle {{ id }} ?"
+      },
+      "detail": {
+        "title": "User Coopcycle"
+      },
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "phone": "Phone",
+      "commerce": "Commerce",
+      "cooperative": "Cooperative",
+      "basket": "Basket",
+      "courier": "Courier",
+      "client": "Client",
+      "merchant": "Merchant"
+    }
+  }
+}

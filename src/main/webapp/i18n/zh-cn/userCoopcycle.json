@@ -1,0 +1,31 @@
+{
+  "myblogApp": {
+    "userCoopcycle": {
+      "home": {
+        "title": "User Coopcycles",
+        "createLabel": "创建新 User Coopcycle",
+        "createOrEditLabel": "创建或编辑 User Coopcycle",
+        "notFound": "No User Coopcycles found"
+      },
+      "created": "User Coopcycle {{ param }} 创建成功",
+      "updated": "User Coopcycle {{ param }} 更新成功",
+      "deleted": "User Coopcycle {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 User Coopcycle {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "User Coopcycle"
+      },
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "phone": "Phone",
+      "commerce": "Commerce",
+      "cooperative": "Cooperative",
+      "basket": "Basket",
+      "courier": "Courier",
+      "client": "Client",
+      "merchant": "Merchant"
+    }
+  }
+}

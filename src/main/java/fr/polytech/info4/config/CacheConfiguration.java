@@ -48,6 +48,24 @@ public class CacheConfiguration {
             createCache(cm, fr.polytech.info4.domain.User.class.getName());
             createCache(cm, fr.polytech.info4.domain.Authority.class.getName());
             createCache(cm, fr.polytech.info4.domain.User.class.getName() + ".authorities");
+            createCache(cm, fr.polytech.info4.domain.Courier.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Client.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Merchant.class.getName());
+            createCache(cm, fr.polytech.info4.domain.UserCoopcycle.class.getName());
+            createCache(cm, fr.polytech.info4.domain.UserCoopcycle.class.getName() + ".baskets");
+            createCache(cm, fr.polytech.info4.domain.Basket.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Basket.class.getName() + ".courses");
+            createCache(cm, fr.polytech.info4.domain.Basket.class.getName() + ".products");
+            createCache(cm, fr.polytech.info4.domain.Course.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Product.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Product.class.getName() + ".baskets");
+            createCache(cm, fr.polytech.info4.domain.Product.class.getName() + ".commerce");
+            createCache(cm, fr.polytech.info4.domain.Cooperative.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Cooperative.class.getName() + ".commerce");
+            createCache(cm, fr.polytech.info4.domain.Commerce.class.getName());
+            createCache(cm, fr.polytech.info4.domain.Commerce.class.getName() + ".baskets");
+            createCache(cm, fr.polytech.info4.domain.Commerce.class.getName() + ".products");
+            createCache(cm, fr.polytech.info4.domain.Commerce.class.getName() + ".cooperatives");
             // jhipster-needle-ehcache-add-entry
         };
     }

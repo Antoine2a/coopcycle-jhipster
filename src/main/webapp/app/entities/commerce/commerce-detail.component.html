@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="commerce">
+            <h2><span jhiTranslate="myblogApp.commerce.detail.title">Commerce</span> {{ commerce.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myblogApp.commerce.adress">Adress</span></dt>
+                <dd>
+                    <span>{{ commerce.adress }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.commerce.notationCommerce">Notation Commerce</span></dt>
+                <dd>
+                    <span>{{ commerce.notationCommerce }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.commerce.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'myblogApp.TypeCommerce.' + commerce.type }}">{{ commerce.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.commerce.product">Product</span></dt>
+                <dd>
+                    <span *ngFor="let product of commerce.products; let last = last">
+                        <a [routerLink]="['/product', product?.id, 'view']">{{ product.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/commerce', commerce.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

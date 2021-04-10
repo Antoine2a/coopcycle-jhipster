@@ -1,0 +1,28 @@
+{
+  "myblogApp": {
+    "commerce": {
+      "home": {
+        "title": "Commerce",
+        "createLabel": "创建新 Commerce",
+        "createOrEditLabel": "创建或编辑 Commerce",
+        "notFound": "No Commerce found"
+      },
+      "created": "Commerce {{ param }} 创建成功",
+      "updated": "Commerce {{ param }} 更新成功",
+      "deleted": "Commerce {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Commerce {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Commerce"
+      },
+      "adress": "Adress",
+      "notationCommerce": "Notation Commerce",
+      "type": "Type",
+      "basket": "Basket",
+      "product": "Product",
+      "userCoopcycle": "User Coopcycle",
+      "cooperative": "Cooperative"
+    }
+  }
+}

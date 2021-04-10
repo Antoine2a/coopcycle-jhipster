@@ -1,0 +1,32 @@
+{
+  "name": "Course",
+  "fields": [
+    {
+      "fieldName": "idCourse",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "basket",
+      "otherEntityRelationshipName": "course",
+      "relationshipName": "basket",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210410182914",
+  "entityTableName": "course",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

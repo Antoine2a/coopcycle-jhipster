@@ -1,0 +1,30 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "adress",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userCoopcycle",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "userCoopcycle",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210410182514",
+  "entityTableName": "client",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

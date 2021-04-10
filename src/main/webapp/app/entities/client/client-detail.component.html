@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="client">
+            <h2><span jhiTranslate="myblogApp.client.detail.title">Client</span> {{ client.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myblogApp.client.adress">Adress</span></dt>
+                <dd>
+                    <span>{{ client.adress }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.client.userCoopcycle">User Coopcycle</span></dt>
+                <dd>
+                    <div *ngIf="client.userCoopcycle">
+                        <a [routerLink]="['/user-coopcycle', client.userCoopcycle?.id, 'view']">{{ client.userCoopcycle?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/client', client.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

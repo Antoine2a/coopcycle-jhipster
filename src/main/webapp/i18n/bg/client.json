@@ -1,0 +1,23 @@
+{
+  "myblogApp": {
+    "client": {
+      "home": {
+        "title": "Clients",
+        "createLabel": "Създайте нов Client",
+        "createOrEditLabel": "Създайте или редактирайте Client",
+        "notFound": "Clients не са намерени"
+      },
+      "created": "Създаден е нов Client с идентификатор {{ param }}",
+      "updated": "Client с идентификатор {{ param }} e oбновен",
+      "deleted": "Client с идентификатор {{ param }} е изтрит",
+      "delete": {
+        "question": "Наистина ли искате да изтриете Client {{ id }}?"
+      },
+      "detail": {
+        "title": "Client"
+      },
+      "adress": "Adress",
+      "userCoopcycle": "User Coopcycle"
+    }
+  }
+}

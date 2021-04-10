@@ -1,0 +1,60 @@
+{
+  "name": "Commerce",
+  "fields": [
+    {
+      "fieldName": "adress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notationCommerce",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "TypeCommerce",
+      "fieldValues": "Tacos,Pizzeria,Hamburger,Bakery"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "basket",
+      "otherEntityRelationshipName": "commerce",
+      "relationshipName": "basket"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "commerce",
+      "relationshipName": "product",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userCoopcycle",
+      "otherEntityRelationshipName": "commerce",
+      "relationshipName": "userCoopcycle",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "cooperative",
+      "otherEntityRelationshipName": "commerce",
+      "relationshipName": "cooperative",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210410183214",
+  "entityTableName": "commerce",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,28 @@
+{
+  "myblogApp": {
+    "commerce": {
+      "home": {
+        "title": "Commerce",
+        "createLabel": "Commerce အသစ်ထည့်မည်",
+        "createOrEditLabel": "Commerce အသစ်ထည့်ခြင်း (သို့) ပြုပြင်ခြင်း",
+        "notFound": "No Commerce found"
+      },
+      "created": "{{ param }} အိုင်ဒီဖြင့် Commerce အသစ်တစ်ခုအား ထည့်ပြီးပါပြီ။",
+      "updated": "{{ param }} အိုင်ဒီဖြင့် Commerce တစ်ခုအား ပြုပြင်ပြီးပါပြီ။",
+      "deleted": "{{ param }} အိုင်ဒီဖြင့် Commerce တစ်ခုအား ဖျက်ပြီးပါပြီ။",
+      "delete": {
+        "question": "Commerce {{ id }} အား ဖျက်ပါမည်။ သေချာပါသလား?"
+      },
+      "detail": {
+        "title": "Commerce"
+      },
+      "adress": "Adress",
+      "notationCommerce": "Notation Commerce",
+      "type": "Type",
+      "basket": "Basket",
+      "product": "Product",
+      "userCoopcycle": "User Coopcycle",
+      "cooperative": "Cooperative"
+    }
+  }
+}

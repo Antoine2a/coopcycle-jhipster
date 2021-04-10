@@ -1,0 +1,25 @@
+{
+  "name": "Merchant",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userCoopcycle",
+      "otherEntityRelationshipName": "merchant",
+      "relationshipName": "userCoopcycle",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210410182614",
+  "entityTableName": "merchant",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

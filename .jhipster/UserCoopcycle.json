@@ -1,0 +1,94 @@
+{
+  "name": "UserCoopcycle",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "surname",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "pattern"
+      ],
+      "fieldValidateRulesPattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "minlength",
+        "maxlength"
+      ],
+      "fieldValidateRulesMinlength": "10",
+      "fieldValidateRulesMaxlength": "10"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "commerce",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "commerce",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "cooperative",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "cooperative",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "basket",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "basket"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "courier",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "courier",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "client",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "merchant",
+      "otherEntityRelationshipName": "userCoopcycle",
+      "relationshipName": "merchant",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210410182714",
+  "entityTableName": "user_coopcycle",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

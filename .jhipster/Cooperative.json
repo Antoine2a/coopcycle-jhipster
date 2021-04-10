@@ -1,0 +1,37 @@
+{
+  "name": "Cooperative",
+  "fields": [
+    {
+      "fieldName": "adress",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "commerce",
+      "otherEntityRelationshipName": "cooperative",
+      "relationshipName": "commerce",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userCoopcycle",
+      "otherEntityRelationshipName": "cooperative",
+      "relationshipName": "userCoopcycle",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20210410183114",
+  "entityTableName": "cooperative",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

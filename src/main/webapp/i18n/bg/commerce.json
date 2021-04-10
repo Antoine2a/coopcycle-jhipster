@@ -1,0 +1,28 @@
+{
+  "myblogApp": {
+    "commerce": {
+      "home": {
+        "title": "Commerce",
+        "createLabel": "Създайте нов Commerce",
+        "createOrEditLabel": "Създайте или редактирайте Commerce",
+        "notFound": "Commerce не са намерени"
+      },
+      "created": "Създаден е нов Commerce с идентификатор {{ param }}",
+      "updated": "Commerce с идентификатор {{ param }} e oбновен",
+      "deleted": "Commerce с идентификатор {{ param }} е изтрит",
+      "delete": {
+        "question": "Наистина ли искате да изтриете Commerce {{ id }}?"
+      },
+      "detail": {
+        "title": "Commerce"
+      },
+      "adress": "Adress",
+      "notationCommerce": "Notation Commerce",
+      "type": "Type",
+      "basket": "Basket",
+      "product": "Product",
+      "userCoopcycle": "User Coopcycle",
+      "cooperative": "Cooperative"
+    }
+  }
+}

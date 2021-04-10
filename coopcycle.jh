@@ -1,0 +1,70 @@
+entity Courier {    
+    notation Integer
+    latitude Float
+    longitude Float
+}
+
+entity Client {    
+    adress String
+}
+
+entity Merchant {
+	
+}
+
+entity UserCoopcycle {
+	id Integer required
+    name String required
+    surname String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String minlength(10) maxlength(10)
+}
+
+entity Basket{
+	totalprice Integer
+    destination String
+}
+
+entity Course {
+	idCourse Integer required
+}
+
+entity Product {
+    name String required
+  	description String
+  	price Float required min(0)
+}
+
+entity Cooperative {
+	adress String
+}
+
+entity Commerce {
+	adress String
+    notationCommerce Integer
+    type TypeCommerce
+}
+
+enum TypeCommerce {
+    Tacos, Pizzeria, Hamburger, Bakery
+}
+
+relationship ManyToMany {
+  Cooperative to Commerce
+  Commerce to Product
+  Product to Basket
+}
+
+relationship OneToMany {
+  UserCoopcycle to Basket
+  Basket to Course
+  Commerce to Basket
+}
+
+relationship OneToOne {
+  UserCoopcycle to Commerce
+  UserCoopcycle to Cooperative
+  Courier to UserCoopcycle
+  Client to UserCoopcycle
+  Merchant to UserCoopcycle
+}

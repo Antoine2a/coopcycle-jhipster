@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="basket">
+            <h2><span jhiTranslate="myblogApp.basket.detail.title">Basket</span> {{ basket.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myblogApp.basket.totalprice">Totalprice</span></dt>
+                <dd>
+                    <span>{{ basket.totalprice }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.basket.destination">Destination</span></dt>
+                <dd>
+                    <span>{{ basket.destination }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.basket.userCoopcycle">User Coopcycle</span></dt>
+                <dd>
+                    <div *ngIf="basket.userCoopcycle">
+                        <a [routerLink]="['/user-coopcycle', basket.userCoopcycle?.id, 'view']">{{ basket.userCoopcycle?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.basket.commerce">Commerce</span></dt>
+                <dd>
+                    <div *ngIf="basket.commerce">
+                        <a [routerLink]="['/commerce', basket.commerce?.id, 'view']">{{ basket.commerce?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/basket', basket.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

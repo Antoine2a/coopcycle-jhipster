@@ -1,0 +1,11 @@
+{
+  "myblogApp": {
+    "TypeCommerce": {
+      "null": "",
+      "Tacos": "Tacos",
+      "Pizzeria": "Pizzeria",
+      "Hamburger": "Hamburger",
+      "Bakery": "Bakery"
+    }
+  }
+}

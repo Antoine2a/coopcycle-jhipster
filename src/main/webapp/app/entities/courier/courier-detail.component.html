@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="courier">
+            <h2><span jhiTranslate="myblogApp.courier.detail.title">Courier</span> {{ courier.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myblogApp.courier.notation">Notation</span></dt>
+                <dd>
+                    <span>{{ courier.notation }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.courier.latitude">Latitude</span></dt>
+                <dd>
+                    <span>{{ courier.latitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.courier.longitude">Longitude</span></dt>
+                <dd>
+                    <span>{{ courier.longitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="myblogApp.courier.userCoopcycle">User Coopcycle</span></dt>
+                <dd>
+                    <div *ngIf="courier.userCoopcycle">
+                        <a [routerLink]="['/user-coopcycle', courier.userCoopcycle?.id, 'view']">{{ courier.userCoopcycle?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/courier', courier.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
