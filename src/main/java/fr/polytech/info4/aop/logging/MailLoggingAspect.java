@@ -24,6 +24,9 @@ public class MailLoggingAspect {
         this.env = env;
     }
 
+    
+    private Logger log = LoggerFactory.getLogger(this.getClass());
+
     @Pointcut("within(fr.polytech.info4.repository..*)"+
     " || within(fr.polytech.info4.service..*)"+
     " || within(fr.polytech.info4.web.rest..*)")
@@ -31,22 +34,11 @@ public class MailLoggingAspect {
             // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }
 
-    @After("sendEmail()")
+    @Around("sendEmail()")
     public void sendNewEmail(JoinPoint joinPoint){
-        Logger log = logger(joinPoint);
         if (log.isDebugEnabled()) {
             log.debug("test - log Mail logging Aspect");
             log.debug("Enter: {}() with argument[s] = {}", joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
-        }
-        try {
-            Object result = joinPoint.proceed();
-            if (log.isDebugEnabled()) {
-                log.debug("Exit: {}() with result = {}", joinPoint.getSignature().getName(), result);
-            }
-            return;
-        } catch (IllegalArgumentException e) {
-            log.error("Illegal argument: {} in {}()", Arrays.toString(joinPoint.getArgs()), joinPoint.getSignature().getName());
-            throw e;
         }
     }
 
