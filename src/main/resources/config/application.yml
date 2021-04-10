@@ -144,15 +144,15 @@ jhipster:
     from: myblog@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: myblog API
-    description: myblog API documentation
+    title: myblog API - (Coopcycle)
+    description: myblog API documentation (not a blog but coopcycle in fact)
     version: 0.0.1
-    terms-of-service-url:
-    contact-name:
-    contact-url:
-    contact-email:
-    license: unlicensed
-    license-url:
+    terms-of-service-url: https://mensakas.coopcycle.org/es/legal
+    contact-name: John Smith
+    contact-url: https://wiki.coopcycle.org/fr:contact
+    contact-email: joshsmith@coopcycle.org
+    license: Coopyleft
+    license-url: https://wiki.coopcycle.org/fr:license
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
